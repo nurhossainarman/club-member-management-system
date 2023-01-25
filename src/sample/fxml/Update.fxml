@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity"
+            maxWidth="-Infinity"
+            minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="727.0"
+            prefWidth="1112.0"
+            xmlns="http://javafx.com/javafx/16"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller">
+   <children>
+      <ImageView fitHeight="736.0" fitWidth="1185.0" layoutX="-18.0" layoutY="-4.0">
+         <image>
+            <Image url="@../images/bg.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="120.0" layoutY="153.0" prefHeight="434.0" prefWidth="303.0">
+         <children>
+            <HBox prefHeight="58.0" prefWidth="303.0">
+               <children>
+                  <Label fx:id="w1FullName" prefHeight="37.0" prefWidth="80.0" text="Full Name" textFill="WHITE" />
+                  <TextField fx:id="w1FullNameField" onAction="#handleFullName" prefHeight="35.0" prefWidth="230.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="58.0" prefWidth="303.0">
+               <children>
+                  <Label fx:id="w1StudentIdLabel" prefHeight="37.0" prefWidth="80.0" text="Student ID" textFill="WHITE" />
+                  <TextField fx:id="w1IdField" onAction="#handleId" prefHeight="35.0" prefWidth="230.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="58.0" prefWidth="303.0">
+               <children>
+                  <Label fx:id="w1DateOfBirthLabel" prefHeight="37.0" prefWidth="80.0" text="Date of Birth" textFill="WHITE" />
+                  <DatePicker fx:id="w1DateOfBirthPicker" onAction="#handleDOB" prefHeight="35.0" prefWidth="230.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="58.0" prefWidth="303.0">
+               <children>
+                  <Label fx:id="w1GenderLabel" prefHeight="37.0" prefWidth="80.0" text="Gender" textFill="WHITE" />
+                  <ComboBox fx:id="w1GenderCommonBox" onAction="#handleGender" prefHeight="35.0" prefWidth="230.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="58.0" prefWidth="303.0">
+               <children>
+                  <Label fx:id="w1DepatmentLabel" prefHeight="37.0" prefWidth="80.0" text="Department" textFill="WHITE" />
+                  <TextField fx:id="w1DepartmentField" onAction="#handleDepartment" prefHeight="35.0" prefWidth="230.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="58.0" prefWidth="303.0">
+               <children>
+                  <Label fx:id="w1PhoneLabel" prefHeight="37.0" prefWidth="80.0" text="Phone" textFill="WHITE" />
+                  <TextField fx:id="w1PhoneField" onAction="#handlePhone" prefHeight="35.0" prefWidth="230.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="68.0" prefWidth="303.0">
+               <children>
+                  <Label fx:id="w1PhotoLabel" prefHeight="37.0" prefWidth="80.0" text="Photo" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="w1ChoosePhotoButton" mnemonicParsing="false" onAction="#handleChoosePhotoButton" prefHeight="26.0" prefWidth="106.0" text="Choose Photo">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <ImageView fx:id="w1ImageView" fitHeight="69.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="512.0" layoutY="593.0" prefHeight="26.0" prefWidth="88.0" />
+      <Label fx:id="eroormessage" alignment="TOP_LEFT" contentDisplay="CENTER" graphicTextGap="2.0" layoutX="698.0" layoutY="606.0" prefHeight="91.0" prefWidth="390.0" textFill="#ff3232">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="120.0" layoutY="57.0" prefHeight="36.0" prefWidth="338.0" text="Member Management System" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="back" layoutX="25.0" layoutY="672.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="20.0" prefWidth="50.0" text="Back" />
+      <Label fx:id="updateMessage" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="2.0" layoutX="613.0" layoutY="282.0" prefHeight="163.0" prefWidth="390.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="w1SaveButton" layoutX="336.0" layoutY="593.0" mnemonicParsing="false" onAction="#handleSaveButton" prefHeight="26.0" prefWidth="86.0" text="Update" />
+   </children>
+</AnchorPane>

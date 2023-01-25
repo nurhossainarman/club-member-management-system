@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="727.0" prefWidth="1112.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MemberList">
+   <children>
+      <ImageView fitHeight="727.0" fitWidth="1131.0">
+         <image>
+            <Image url="@../images/bg.png" />
+         </image>
+      </ImageView>
+      <ListView fx:id="listview" fixedCellSize="-3.0" prefHeight="727.0" prefWidth="458.0" />
+      <TextField fx:id="searchText" layoutX="669.0" layoutY="307.0" prefHeight="26.0" prefWidth="203.0" promptText="Please enter a student id" />
+      <Button fx:id="searchButton" layoutX="889.0" layoutY="307.0" mnemonicParsing="false" onAction="#handleSearchButton" text="Search" />
+      <Button fx:id="back" layoutX="1025.0" layoutY="665.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="26.0" prefWidth="59.0" text="Back" />
+      <Label fx:id="showMessage" alignment="CENTER" layoutX="668.0" layoutY="226.0" prefHeight="46.0" prefWidth="273.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <HBox layoutX="593.0" layoutY="373.0" prefHeight="60.0" prefWidth="423.0">
+         <children>
+            <Button fx:id="viewMember" mnemonicParsing="false" onAction="#handleViewMember" prefHeight="26.0" prefWidth="106.0" text="View Member" />
+            <Button fx:id="editMember" mnemonicParsing="false" onAction="#handleEditMember" prefHeight="26.0" prefWidth="106.0" text="Edit Member">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="deleteMember" mnemonicParsing="false" onAction="#handleDeleteMember" prefHeight="26.0" prefWidth="106.0" text="Delete Member">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
